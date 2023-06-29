@@ -1,16 +1,19 @@
+'use client'
 import { usePathname, useRouter } from 'next/navigation'
 import styles from '@/styles/home/layout.module.scss'
 import Link from 'next/link'
 import Image from 'next/image'
 import { routes } from '@/app/(home)/_config/routes'
+import { useIsMobile } from '@/utils'
 
 export default function SideBar({ collapsed, toggleSideBar }: { collapsed: boolean; toggleSideBar: () => void }) {
   const currentPath = usePathname()
   const router = useRouter()
+  const isMobile = useIsMobile()
 
   const handleSelect = (path: string) => {
     router.push(path)
-    toggleSideBar()
+    isMobile && toggleSideBar()
   }
 
   return (
@@ -25,8 +28,7 @@ export default function SideBar({ collapsed, toggleSideBar }: { collapsed: boole
               key={i.path}
               onClick={() => {
                 handleSelect(i.path)
-              }}
-            >
+              }}>
               <li className={i.path === currentPath ? styles.selected : undefined}>
                 {i.getIcon()}
                 <span>{i.title}</span>

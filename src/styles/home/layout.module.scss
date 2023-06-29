@@ -97,7 +97,23 @@
   }
   &.collapsed {
     width: 0;
-    opacity: 0;
+    li {
+      padding: 0;
+    }
+    //transition: width .1s linear .25s;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .sideBar {
+    width: 0;
+    transition: width .1s linear .25s;
+    li {
+      padding: 0 !important;
+    }
+    &.collapsed {
+      width: 200px;
+      transition: width .25s linear;
+    }
   }
 }
 

@@ -12,12 +12,12 @@ export default function Header({ collapsed, toggleSideBar }: { collapsed: boolea
   return (
     <header className={styles.header}>
       <div className={'flex items-center'}>
-        {React.createElement(collapsed ? MenuUnfoldOutlined : MenuFoldOutlined, {
-          onClick: toggleSideBar
-        })}
-        <Link href={'/'} className={'pl-3'}>
-          Fendy's Tool~
-        </Link>
+        <span className={'pr-3 flex'}>
+          {React.createElement(collapsed ? MenuFoldOutlined : MenuUnfoldOutlined, {
+            onClick: toggleSideBar
+          })}
+        </span>
+        <Link href={'/'}>Fendy's Tool~</Link>
       </div>
       <div>Login</div>
     </header>
