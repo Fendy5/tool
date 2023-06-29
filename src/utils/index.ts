@@ -4,7 +4,11 @@
 import { createFromIconfontCN } from '@ant-design/icons'
 
 export const isMobile = () => {
-  return window.innerWidth <= 768
+  if (typeof window !== 'undefined') {
+    return window.innerWidth <= 768
+  } else {
+    return false
+  }
 }
 
 export const IconFont = createFromIconfontCN({
