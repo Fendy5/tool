@@ -6,8 +6,8 @@ import SideBar from '@/app/(home)/_components/SideBar'
 import Header from '@/app/(home)/_components/Header'
 import styles from '@/styles/home/layout.module.scss'
 import Footer from '@/app/(home)/_components/Footer'
-
-// const SideBar = dynamic(() => import('@/app/(home)/_components/SideBar'))
+import { ConfigProvider } from 'antd'
+import theme from '@/config/antd-theme'
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   const isMobile = useIsMobile()
@@ -25,7 +25,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   }
 
   return (
-    <>
+    <ConfigProvider theme={theme}>
       <SideBar toggleSideBar={toggleSideBar} collapsed={collapsed} />
       <section className={[styles.layout, collapsed || isMobile ? styles.collapsed : ''].join(' ')}>
         <Header collapsed={collapsed} toggleSideBar={toggleSideBar} />
@@ -38,6 +38,6 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         </main>
         <Footer />
       </section>
-    </>
+    </ConfigProvider>
   )
 }

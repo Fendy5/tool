@@ -1,0 +1,10 @@
+@import "variables.module";
+
+button,
+[type='button'],
+[type='reset'],
+[type='submit'] {
+  -webkit-appearance: button;
+  background-color: $colorPrimary;
+  background-image: inherit;
+}

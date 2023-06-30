@@ -1,4 +1,5 @@
 import './globals.css'
+import '@/styles/antd.scss'
 import { Inter } from 'next/font/google'
 import React from 'react'
 
