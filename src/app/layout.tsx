@@ -7,7 +7,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
   title: "Fendy's Tool~",
-  description: '随机字符串、图片格式转换、图片批量压缩、二进制转换'
+  description: '随机字符串 图片格式转换 图片批量压缩 二进制转换'
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
