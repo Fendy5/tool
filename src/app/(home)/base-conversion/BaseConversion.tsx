@@ -26,12 +26,12 @@ export default function BaseConversion() {
 
   const handleChange = () => {}
   return (
-    <div className={'absolute-center max-w-[36rem] w-4/5'}>
+    <div className={'absolute-center w-5/6 lg:w-[36rem]'}>
       <div className="card">
         <div className="text-center text-2xl font-bold mb-6">进制转换</div>
-        <Form colon layout={'horizontal'} labelCol={{ span: 8 }} onFinish={onFinish} form={form}>
+        <Form colon layout={'horizontal'} labelCol={{ span: 6 }} onFinish={onFinish} form={form}>
           <Form.Item rules={[{ required: true, message: '请选择源进制' }]} name={'origin'} label={'源进制'}>
-            <Select style={{ width: '200px' }} placeholder={'请选择源进制'} onChange={handleChange}>
+            <Select className={'md:!w-80'} placeholder={'请选择源进制'} onChange={handleChange}>
               {baseOption.map((option) => (
                 <Option key={option.value} value={option.value}>
                   {option.label}
@@ -39,12 +39,12 @@ export default function BaseConversion() {
               ))}
             </Select>
           </Form.Item>
-          <Form.Item rules={[{ required: true, message: '请输入源进制数值' }]} name={'number'} label={'数值'}>
-            <Input style={{ width: '200px' }} placeholder={'请输入源进制数值'} />
+          <Form.Item style={{ flexWrap: 'nowrap' }} rules={[{ required: true, message: '请输入源进制数值' }]} name={'number'} label={'数值'}>
+            <Input className={'md:w-80'} placeholder={'请输入源进制数值'} />
           </Form.Item>
           <h1 className={'text-center mb-4'}>转</h1>
           <Form.Item rules={[{ required: true, message: '请选择目标进制' }]} name={'target'} label={'目标进制'}>
-            <Select style={{ width: '200px' }} placeholder={'请选择目标进制'} onChange={handleChange}>
+            <Select className={'md:!w-80'} placeholder={'请选择目标进制'} onChange={handleChange}>
               {baseOption.map((option) => (
                 <Option key={option.value} value={option.value}>
                   {option.label}
@@ -52,12 +52,12 @@ export default function BaseConversion() {
               ))}
             </Select>
           </Form.Item>
-          <Form.Item wrapperCol={{ span: 16, offset: 8 }}>
+          <Form.Item wrapperCol={{ span: 16, offset: 6 }}>
             <Button type="primary" htmlType="submit">
               确定
             </Button>
           </Form.Item>
-          <Form.Item wrapperCol={{ span: 16, offset: 8 }}>
+          <Form.Item wrapperCol={{ span: 16, offset: 6 }}>
             <span className={'text-primary px-4 py-2 bg-green-300 break-all rounded'}>{res}</span>
           </Form.Item>
         </Form>
