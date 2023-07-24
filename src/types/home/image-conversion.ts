@@ -4,8 +4,8 @@
  * @Description
  */
 export interface ImageConversionFormProp {
-  imageUrl: string
-  targetType?: string
-  size?: number | undefined
-  compressionRate: number
+  id: string
+  targetType: string
+  // size?: number | undefined
+  // compressionRate: number
 }

@@ -2,7 +2,7 @@
 
 import { Button, Checkbox, Form, Input } from 'antd'
 import { useState } from 'react'
-import { FormProps, OptionsProp, StringType } from '@/app/types/random-string'
+import { FormProps, OptionsProp, StringType } from '@/types/home/random-string'
 
 export default function RandomString() {
   const [form] = Form.useForm()

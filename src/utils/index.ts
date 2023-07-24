@@ -29,3 +29,48 @@ export const useIsMobile = () => {
 export const IconFont = createFromIconfontCN({
   scriptUrl: ['//at.alicdn.com/t/c/font_1968175_o3urdd08ejb.js']
 })
+
+export const getRandomString = (length: number = 8) => {
+  const chars = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
+  let result = ''
+  for (let i = length; i > 0; --i) result += chars[Math.floor(Math.random() * chars.length)]
+  return result
+}
+
+// interface ResponseProp<T> {
+//   code: number
+//   data: T
+//   msg: string
+// }
+// export const _fetch = async <T>(url: string, method?: string, data?: any) => {
+//   try {
+//     let response = null
+//     if (method === 'post') {
+//       response = await fetch(url, {
+//         headers: {
+//           'Content-Type': 'application/json'
+//         },
+//         body: JSON.stringify(data),
+//         method
+//       })
+//     } else {
+//       const getUrl = new URL(url)
+//       getUrl.search = new URLSearchParams(data).toString()
+//       response = await fetch(getUrl)
+//     }
+//     const responseJson = (await response.json()) as ResponseProp<T>
+//     const { code, msg } = responseJson
+//     if (msg) {
+//       code === 1 && message.success(msg)
+//       code === 0 && message.error(msg)
+//     }
+//     return responseJson
+//   } catch (error) {
+//     message.error(`网络错误，${error}`)
+//     return {
+//       code: 0,
+//       data: '',
+//       msg: ''
+//     } as ResponseProp<T>
+//   }
+// }
