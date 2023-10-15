@@ -42,9 +42,15 @@ export const routes: RouterConfig[] = [
     getIcon: (fontSize) => <IconFont style={{ fontSize }} type={'icon-image'} />
   },
   {
-    path: '/batch-image-compression',
-    title: '批量压缩图片',
-    desc: '批量压缩图片，可一键打包下载所有图片',
-    getIcon: (fontSize) => <IconFont style={{ fontSize }} type={'icon-wenjian_yasuobao'} />
+    path: '/color-binary-transform',
+    title: '颜色进制转换',
+    desc: '16进制颜色转换',
+    getIcon: (fontSize) => <IconFont style={{ fontSize }} type={'icon-color'} />
   }
+  // {
+  //   path: '/batch-image-compression',
+  //   title: '批量压缩图片',
+  //   desc: '批量压缩图片，可一键打包下载所有图片',
+  //   getIcon: (fontSize) => <IconFont style={{ fontSize }} type={'icon-wenjian_yasuobao'} />
+  // }
 ]

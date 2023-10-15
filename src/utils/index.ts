@@ -74,3 +74,24 @@ export const getRandomString = (length: number = 8) => {
 //     } as ResponseProp<T>
 //   }
 // }
+
+// 复制文本到剪切板
+export const copyText = (text: string) => {
+  // 创建一个临时的<textarea>元素来存放要复制的文本
+  const tempTextArea = document.createElement('textarea')
+  tempTextArea.value = text
+
+  // 将<textarea>元素添加到文档中
+  document.body.appendChild(tempTextArea)
+
+  // 选择<textarea>中的文本
+  tempTextArea.select()
+
+  // 尝试执行复制命令
+  const copySuccessful = document.execCommand('copy')
+
+  // 从文档中移除<textarea>元素
+  document.body.removeChild(tempTextArea)
+
+  return copySuccessful
+}
