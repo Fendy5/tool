@@ -6,10 +6,12 @@ interface ResponseProp<T> {
   msg: string
 }
 
+const BASE_API = process.env.NEXT_PUBLIC_BASE_URL
+
 const get = async <T>(url: string, params: any) => {
   try {
     const query = new URLSearchParams(params).toString()
-    const response = await fetch(`${url}?${query}`)
+    const response = await fetch(`${BASE_API}${url}?${query}`)
     const responseJson = (await response.json()) as ResponseProp<T>
     const { code, msg } = responseJson
     if (msg) {
@@ -29,7 +31,7 @@ const get = async <T>(url: string, params: any) => {
 
 const post = async <T>(url: string, data?: any) => {
   try {
-    let response = await fetch(url, {
+    let response = await fetch(BASE_API + url, {
       headers: {
         'Content-Type': 'application/json'
       },
@@ -55,7 +57,7 @@ const post = async <T>(url: string, data?: any) => {
 
 const download = async (url: string) => {
   try {
-    const response = await fetch(url)
+    const response = await fetch(BASE_API + url)
     const imageUrl = URL.createObjectURL(await response.blob())
     const downloadLink = document.createElement('a')
     downloadLink.href = imageUrl
