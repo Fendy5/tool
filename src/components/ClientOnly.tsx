@@ -13,8 +13,11 @@ const ClientOnly: React.FC<ClientOnlyProps> = ({ children }) => {
     setHasMounted(true)
   }, [])
 
-  if (!hasMounted) return null
-
+  if (!hasMounted)
+    return null
+    // <div className={'absolute-center'}>
+    //   <img src={'/images/loading.svg'} alt={'Loading'} />
+    // </div>
   return <>{children}</>
 }
 
