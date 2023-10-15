@@ -27,7 +27,7 @@ export const useIsMobile = () => {
 }
 
 export const IconFont = createFromIconfontCN({
-  scriptUrl: ['//at.alicdn.com/t/c/font_1968175_o3urdd08ejb.js']
+  scriptUrl: '/iconfont/iconfont.js'
 })
 
 export const getRandomString = (length: number = 8) => {

@@ -1,0 +1,65 @@
+{
+  "id": "1968175",
+  "name": "Tools",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "1389605",
+      "name": "color",
+      "font_class": "color",
+      "unicode": "e760",
+      "unicode_decimal": 59232
+    },
+    {
+      "icon_id": "4990746",
+      "name": "贷款1",
+      "font_class": "daikuan",
+      "unicode": "e62a",
+      "unicode_decimal": 58922
+    },
+    {
+      "icon_id": "8219249",
+      "name": "文件_压缩包",
+      "font_class": "wenjian_yasuobao",
+      "unicode": "e60d",
+      "unicode_decimal": 58893
+    },
+    {
+      "icon_id": "159969",
+      "name": "more",
+      "font_class": "gengduo",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "12693036",
+      "name": "image",
+      "font_class": "image",
+      "unicode": "e823",
+      "unicode_decimal": 59427
+    },
+    {
+      "icon_id": "9229176",
+      "name": "Field-String",
+      "font_class": "Field-String",
+      "unicode": "e90d",
+      "unicode_decimal": 59661
+    },
+    {
+      "icon_id": "212376",
+      "name": "home",
+      "font_class": "home",
+      "unicode": "e6d7",
+      "unicode_decimal": 59095
+    },
+    {
+      "icon_id": "19664963",
+      "name": "字段二进制",
+      "font_class": "Field-Binary",
+      "unicode": "eaed",
+      "unicode_decimal": 60141
+    }
+  ]
+}
