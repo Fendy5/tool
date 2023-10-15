@@ -12,9 +12,9 @@ import { ImageConversionFormProp } from '@/types/home/image-conversion'
 import { PictureOutlined } from '@ant-design/icons'
 import { getRandomString } from '@/utils'
 import { deleteImage, downloadImage, imageConversionApi } from '@/apis/home/random-string'
+import { IMAGE_UPLOAD_API } from '@/config'
 
 export default function ImageConversion() {
-  const [imageUrl, setImageUrl] = useState('')
   const [downloadId, setDownloadId] = useState('')
   const [fileList, setFileList] = useState<UploadFile[]>([])
   const [id, setId] = useState(getRandomString)
@@ -30,7 +30,7 @@ export default function ImageConversion() {
     data: {
       id
     },
-    action: '/api/v1/upload-image',
+    action: IMAGE_UPLOAD_API,
     beforeUpload: (file: RcFile) => {
       if (!file.type.match(/image\/*/)?.[0]) {
         message.error(`${file.name} 不是有效的图片文件`)
