@@ -1,4 +1,4 @@
-export default {
+const theme = {
   token: {
     colorPrimary: '#a166ef',
     colorLink: '#a166ef',
@@ -10,3 +10,5 @@ export default {
     borderRadius: 2
   }
 }
+
+export default theme
