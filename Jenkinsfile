@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Git Pull') {
       steps {
-        git(credentialsId: 'e39944bd-4ff3-4755-a758-2b23ac136fc6', branch: 'main', url: "git@github.com:Fendy5/${env.ItemName}.git")
+        git(credentialsId: 'e39944bd-4ff3-4755-a758-2b23ac136fc6', branch: 'main', url: "git@ssh.github.com:Fendy5/${env.ItemName}.git")
       }
     }
 
