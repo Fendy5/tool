@@ -5,4 +5,4 @@
  */
 
 // 上传图片api
-export const IMAGE_UPLOAD_API = `/dev-api/api/v1/upload-image`
+export const IMAGE_UPLOAD_API = `${process.env.NEXT_PUBLIC_API_URL}/api/v1/upload-image`
