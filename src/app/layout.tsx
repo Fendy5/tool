@@ -1,13 +1,13 @@
 import './globals.css'
 import '@/styles/antd.scss'
-import { Inter } from 'next/font/google'
+// import { Inter } from 'next/font/google'
 // import Provider from '@/context/client-provider'
 // import { authOptions } from '@/app/api/auth/[...nextauth]/route'
 import React from 'react'
 // import { getServerSession } from 'next-auth'
 import StyledComponentsRegistry from '@/lib/AntdRegistry'
 
-const inter = Inter({ subsets: ['latin'] })
+// const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
   title: "Fendy's Tool~",
@@ -18,7 +18,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
   // const session = await getServerSession(authOptions)
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body>
         <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
       </body>
     </html>
