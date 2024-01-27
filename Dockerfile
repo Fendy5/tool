@@ -16,7 +16,7 @@ COPY package.json ./
 #  else echo "Lockfile not found." && exit 1; \
 #  fi
 
-RUN yarn --frozen-lockfile
+RUN yarn config set registry https://registry.npmmirror.com && yarn --frozen-lockfile
 
 
 # Rebuild the source code only when needed
