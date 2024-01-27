@@ -6,7 +6,7 @@ interface ResponseProp<T> {
   msg: string
 }
 
-const BASE_API = process.env.NEXT_PUBLIC_BASE_URL
+const BASE_API = process.env.NEXT_PUBLIC_API_URL
 
 const get = async <T>(url: string, params: any) => {
   try {
